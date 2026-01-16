@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessories - Fresh Vegetables & Fruits</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+      }
+
+      /* Header */
+      .header {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .header-img {
+        background-image: url(./assets/images/header-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem 14rem;
+      }
+
+      .lhs .Logo {
+        height: 50px;
+        width: 70px;
+        margin-left: 8rem;
+        object-fit: cover;
+      }
+
+      .middle {
+        display: flex;
+        gap: 50px;
+      }
+
+      .middle a {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .middle a:hover {
+        color: #65c92c;
+        font-size: 17px;
+      }
+
+      .rhs a {
+        margin-right: 8rem;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .rhs a:hover {
+        color: #65c92c;
+        font-size: 17px;
+      }
+
+      /* Page header */
+      header {
+        text-align: center;
+        padding: 40px 20px;
+        /* background: linear-gradient(120deg, #43a047, #2e7d32); */
+        color: #000;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+
+      header p {
+        font-size: 1.1rem;
+        margin-top: 10px;
+      }
+
+      /* Accessories Grid */
+      .accessories {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 40px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .item {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .item:hover {
+        transform: translateY(-8px);
+      }
+
+      .item img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .item h3 {
+        margin: 15px 0 5px;
+        font-size: 1.2rem;
+      }
+
+      .item p {
+        font-size: 0.9rem;
+        padding: 0 15px;
+        color: #555;
+      }
+
+      .item button {
+        margin: 15px 0 20px;
+        background: #65c92c;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .item button:hover {
+        background: #43a047;
+      }
+
+      /* Footer */
+      footer {
+        color: white;
+        padding: 50px 20px 20px;
+        background: #03262c url(./assets/footer-bg/footer_bg.png) no-repeat
+          center/cover;
+      }
+
+      .foot-panel1 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+        max-width: 1200px;
+        margin: auto;
+        padding-bottom: 30px;
+      }
+
+      footer h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+
+      footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      footer li {
+        margin: 6px 0;
+        font-size: 14px;
+      }
+
+      footer li a {
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease;
+      }
+
+      footer li a:hover {
+        color: #65c92c;
+      }
+
+      footer .input {
+        width: 100%;
+        max-width: 250px;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        background-color: #11413a;
+        color: white;
+      }
+
+      footer .button2 {
+        background-color: #65c92c;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: 13px;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s, box-shadow 0.3s;
+      }
+
+      footer .button2:hover {
+        background: #43a047;
+        box-shadow: 0px 0px 10px rgba(101, 201, 44, 0.7);
+      }
+
+      footer .social {
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
+      }
+
+      footer .social img {
+        width: 28px;
+        transition: transform 0.3s;
+      }
+
+      footer .social img:hover {
+        transform: scale(1.2);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .foot-panel1 {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="header-img">
+        <div class="lhs">
+          <img
+            class="Logo"
+            src="./assets/images/logo.png"
+            alt="Fresh Veg's Logo"
+          />
+        </div>
+        <nav class="middle">
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./product.html">Product</a>
+          <a href="./gallery.html">Gallery</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <div class="rhs">
+          <a href="#">
+            Call Us!
+            <p>+1 613 123 0258</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Title -->
+    <header>
+      <h1>Accessories</h1>
+      <p>Eco-friendly and useful products to make your lifestyle healthier</p>
+    </header>
+
+    <!-- Accessories Grid -->
+    <section class="accessories">
+      <div class="item">
+        <img src="./assets/accessories/basket.webp" alt="Basket" />
+        <h3>Organic Basket</h3>
+        <p>Handwoven eco-friendly basket for fruits & veggies.</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="item">
+        <img src="./assets/accessories/crate.jpg" alt="Crate" />
+        <h3>Wooden Crate</h3>
+        <p>Rustic storage for fresh produce, sturdy & reusable.</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="item">
+        <img src="./assets/accessories/bag.jpg" alt="Bag" />
+        <h3>Reusable Bag</h3>
+        <p>Eco-friendly cloth bags for sustainable shopping.</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="item">
+        <img src="./assets/accessories/juicer.jpg" alt="Juicer" />
+        <h3>Fruit Juicer</h3>
+        <p>Make fresh juice at home with this handy accessory.</p>
+        <button>Add to Cart</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="foot-panel1">
+        <div class="column1">
+          <h2>Fresh Veg's</h2>
+          <ul>
+            <p>Fresh vegetables are packed with essential nutrients,</p>
+            <p>vibrant flavors, and numerous health benefits.</p>
+            <br />
+            <li>
+              <a href=""><i class="ri-home-4-fill"></i></a> North Beach , San
+              Francisco , CA USA
+            </li>
+            <li>
+              <a href="#"><i class="ri-phone-fill"></i></a> +1 613 123 0258
+            </li>
+            <li>
+              <a href="#"><i class="ri-mail-fill"></i></a> info@example.com
+            </li>
+          </ul>
+        </div>
+
+        <div class="column2">
+          <h2>Customer Support</h2>
+          <ul>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms & Conditions</a></li>
+            <li><a href="./return.html">Product Return</a></li>
+            <li><a href="./wholesale.html">Wholesale Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="column3">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="./product.html">Products</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./accessories.html">Accessories</a></li>
+            <li><a href="./terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+
+        <div class="column4">
+          <h2>News Letter</h2>
+          <input
+            type="text"
+            class="input"
+            placeholder=" Enter your email here"
+          /><br />
+          <button class="button2">SUBSCRIBE</button><br />
+          <h4>Stay Connected</h4>
+          <div class="social">
+            <a href="#"><img src="./assets/social/GIT.png" alt="GitHub" /></a>
+            <a href="#"
+              ><img src="./assets/social/indeed.png" alt="Indeed"
+            /></a>
+            <a href="#"><img src="./assets/social/twit.png" alt="Twitter" /></a>
+            <a href="#"><img src="./assets/social/fb.png" alt="Facebook" /></a>
+            <a href="#"
+              ><img src="./assets/social/insta.png" alt="Instagram"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

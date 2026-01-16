@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Fresh Vegetables & Fruits</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      /* Header */
+      .header-img {
+        background-image: url(./assets/images/header-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem 14rem;
+      }
+
+      .lhs .Logo {
+        height: 50px;
+        width: 70px;
+        margin-left: 8rem;
+        object-fit: cover;
+      }
+
+      .middle {
+        display: flex;
+        gap: 50px;
+      }
+
+      .middle a {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .middle a:hover {
+        color: #65c92c;
+        font-size: 17px;
+      }
+
+      .rhs a {
+        margin-right: 8rem;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .rhs a:hover {
+        color: #65c92c;
+        font-size: 17px;
+      }
+
+      /* Hero Section */
+      header {
+        text-align: center;
+        padding: 50px 20px;
+        /* background: linear-gradient(120deg, #43a047, #2e7d32); */
+        color: #000;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.1rem;
+      }
+
+      /* About Sections */
+      .about-section {
+        max-width: 1100px;
+        margin: 60px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 40px;
+        align-items: center;
+        padding: 0 20px;
+      }
+
+      .about-section img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-section h2 {
+        color: #2e7d32;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      .about-section p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #444;
+      }
+
+      /* Features with Icons */
+      .features {
+        background: #fff;
+        padding: 60px 20px;
+      }
+
+      .features h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: #2e7d32;
+      }
+
+      .feature-grid {
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        text-align: center;
+      }
+
+      .feature-card {
+        background: #f9f9f9;
+        padding: 30px 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+        transition: transform 0.3s;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature-card i {
+        font-size: 2.5rem;
+        color: #65c92c;
+        margin-bottom: 15px;
+      }
+
+      .feature-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #2e7d32;
+      }
+
+      .feature-card p {
+        font-size: 0.95rem;
+        color: #555;
+      }
+
+      /* Footer */
+      footer {
+        color: white;
+        padding: 50px 20px 20px;
+        background: #03262c url(./assets/footer-bg/footer_bg.png) no-repeat
+          center/cover;
+      }
+
+      .foot-panel1 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      footer h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+
+      footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      footer li {
+        margin: 6px 0;
+        font-size: 14px;
+      }
+
+      footer li a {
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease;
+      }
+
+      footer li a:hover {
+        color: #65c92c;
+      }
+
+      footer .input {
+        width: 100%;
+        max-width: 250px;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        background-color: #11413a;
+        color: white;
+      }
+
+      footer .button2 {
+        background-color: #65c92c;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: 13px;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s, box-shadow 0.3s;
+      }
+
+      footer .button2:hover {
+        background: #43a047;
+        box-shadow: 0px 0px 10px rgba(101, 201, 44, 0.7);
+      }
+
+      footer .social {
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
+      }
+
+      footer .social img {
+        width: 28px;
+        transition: transform 0.3s;
+      }
+
+      footer .social img:hover {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="header-img">
+        <div class="lhs">
+          <img
+            class="Logo"
+            src="./assets/images/logo.png"
+            alt="Fresh Veg's Logo"
+          />
+        </div>
+        <nav class="middle">
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./product.html">Product</a>
+          <a href="./gallery.html">Gallery</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <div class="rhs">
+          <a href="#"
+            >Call Us!
+            <p>+1 613 123 0258</p></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <header>
+      <h1>About Fresh Veg's</h1>
+      <p>Bringing you fresh, healthy, and sustainable fruits & vegetables</p>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <img src="./assets/about/about-img.jpg" alt="Farmers working in field" />
+      <div>
+        <h2>Who We Are</h2>
+        <p>
+          We connect you directly with nature’s goodness. At Fresh Veg’s, our
+          produce comes straight from local farms to your table, ensuring
+          maximum freshness, nutrition, and care for the environment.
+        </p>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div>
+        <h2>Our Mission</h2>
+        <p>
+          To inspire healthy lifestyles by making fresh fruits and vegetables
+          accessible to everyone, while also supporting local farmers and
+          promoting sustainable agriculture.
+        </p>
+      </div>
+      <img
+        src="./assets/about/fresh-market.jpg"
+        alt="Fresh fruits and vegetables in market"
+      />
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+      <h2>Why Choose Us?</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <i class="ri-leaf-fill"></i>
+          <h3>Farm Fresh</h3>
+          <p>Hand-picked daily to bring you natural freshness and taste.</p>
+        </div>
+        <div class="feature-card">
+          <i class="ri-heart-3-fill"></i>
+          <h3>Healthy Living</h3>
+          <p>Rich in nutrients that boost immunity and overall health.</p>
+        </div>
+        <div class="feature-card">
+          <i class="ri-earth-fill"></i>
+          <h3>Sustainable</h3>
+          <p>We care about the planet and work with eco-friendly farmers.</p>
+        </div>
+        <div class="feature-card">
+          <i class="ri-truck-fill"></i>
+          <h3>Fast Delivery</h3>
+          <p>Quick, reliable, and hassle-free doorstep delivery service.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="foot-panel1">
+        <div class="column1">
+          <h2>Fresh Veg's</h2>
+          <ul>
+            <p>Fresh vegetables are packed with essential nutrients,</p>
+            <p>vibrant flavors, and numerous health benefits.</p>
+            <br />
+            <li>
+              <a href=""><i class="ri-home-4-fill"></i></a> North Beach , San
+              Francisco , CA USA
+            </li>
+            <li>
+              <a href="#"><i class="ri-phone-fill"></i></a> +1 613 123 0258
+            </li>
+            <li>
+              <a href="#"><i class="ri-mail-fill"></i></a> info@example.com
+            </li>
+          </ul>
+        </div>
+
+        <div class="column2">
+          <h2>Customer Support</h2>
+          <ul>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms & Conditions</a></li>
+            <li><a href="./return.html">Product Return</a></li>
+            <li><a href="./wholesale.html">Wholesale Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="column3">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="./product.html">Products</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./accessories.html">Accessories</a></li>
+            <li><a href="./terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+
+        <div class="column4">
+          <h2>News Letter</h2>
+          <input
+            type="text"
+            class="input"
+            placeholder=" Enter your email here"
+          /><br />
+          <button class="button2">SUBSCRIBE</button><br />
+          <h4>Stay Connected</h4>
+          <div class="social">
+            <a href="#"><img src="./assets/social/GIT.png" alt="GitHub" /></a>
+            <a href="#"
+              ><img src="./assets/social/indeed.png" alt="Indeed"
+            /></a>
+            <a href="#"><img src="./assets/social/twit.png" alt="Twitter" /></a>
+            <a href="#"><img src="./assets/social/fb.png" alt="Facebook" /></a>
+            <a href="#"
+              ><img src="./assets/social/insta.png" alt="Instagram"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

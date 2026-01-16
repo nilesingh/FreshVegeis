@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Fresh Vegetables & Fruits</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      /* background: #E8E8E8; */
+       background-image: url(./assets/banner-slide/Banner-1.jpg);
+      color: #333;
+    }
+
+.header {
+  font-family: "Montserrat", sans-serif;
+}
+
+.header-img {
+  background-image: url(./assets/images/header-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 14rem;
+}
+
+.lhs .Logo {
+  height: 50px;
+  width: 70px;
+  margin-left: 8rem;
+  object-fit: cover; /* Ensures proper scaling of the logo */
+}
+
+.middle {
+  display: flex; /* Ensure the links are laid out horizontally */
+  gap: 50px; /* Spacing between links */
+}
+
+.middle a {
+  text-decoration: none; /* Removes default link underline */
+  color: white; /* Default text color */
+  font-size: 15px; /* Adjust font size */
+  font-weight: bold; /* Makes links stand out */
+}
+
+.middle a:hover {
+  color: #65c92c;
+  font-size: 17px;
+}
+
+.rhs a {
+  margin-right: 8rem;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligns text to the right */
+}
+
+.rhs a span {
+  font-size: 14px; /* Smaller font size for the phone number */
+  color: darkgreen; /* Slightly different color for emphasis */
+}
+
+.rhs a:hover {
+  color: #65c92c;
+  font-size: 17px;
+}
+
+    header {
+      /* background: linear-gradient(120deg, #43a047, #2e7d32); */
+      color: #000000;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .gallery-item:hover .caption {
+      background: rgba(0,0,0,0.8);
+    }
+
+
+footer {
+  color: white;
+  padding: 50px 20px 20px;
+  background: #03262c url(./assets/footer-bg/footer_bg.png) no-repeat center/cover;
+}
+
+.foot-panel1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+footer h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+footer p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+footer li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+footer li a:hover {
+  color: #65c92c; /* vibrant green hover */
+}
+
+footer .input {
+  width: 100%;
+  max-width: 250px;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #11413a;
+  color: white;
+}
+
+footer .button2 {
+  background-color: #65c92c;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 13px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+footer .button2:hover {
+  background: #43a047;
+  box-shadow: 0px 0px 10px rgba(101, 201, 44, 0.7);
+}
+
+footer .social {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+footer .social img {
+  width: 28px;
+  transition: transform 0.3s;
+}
+
+footer .social img:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .foot-panel1 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+  </style>
+</head>
+<body>
+ <div class="header">
+      <div class="header-img">
+        <div class="lhs">
+          <img
+            class="Logo"
+            src="./assets/images/logo.png"
+            alt="Fresh Veg's Logo"
+          />
+        </div>
+        <nav class="middle">
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./product.html">Product</a>
+          <a href="./gallery.html">Gallery</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <div class="rhs">
+          <a href="#">
+            Call Us!
+            <p1>+1 613 123 0258</p1>
+          </a>
+        </div>
+      </div>
+    </div>
+  <header>
+    <h1>Our Gallery</h1>
+    <p>Freshness, Health, and Nature’s Goodness Captured in Pictures</p>
+  </header>
+
+  <div class="gallery">
+
+    <div class="gallery-item">
+      <img src="./assets/gallery/g-1.jpg" alt="Apple">
+      <div class="caption">Strawberries Healthy – Nature’s Energy Booster</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="./assets/gallery/g-2.jpg" alt="Banana">
+      <div class="caption">Mix of vegetables – Instant Energy & Potassium Rich</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="./assets/gallery/g-6.jpg" alt="Orange">
+      <div class="caption">Oranges – Full of Vitamin C & Immunity Power</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="./assets/gallery/g-4.jpg" alt="Grapes">
+      <div class="caption">Lemon – Antioxidant Rich & Deliciously Sweet</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="./assets/gallery/g-5.jpg" alt="Tomato">
+      <div class="caption">Salad – cold dish consisting of vegetables</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="./assets/gallery/g-8.jpg" alt="Broccoli">
+      <div class="caption">Lemon raw – The Superfood Packed with Vitamins</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="./assets/gallery/g-7.jpg" alt="Carrot">
+      <div class="caption">Raw orange – Good for Eyes & Rich in Beta-Carotene</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="./assets/gallery/g-3.jpg" alt="Cucumber">
+      <div class="caption">Cucumbers & Carrots – Cool, Refreshing & Hydrating</div>
+    </div>
+
+
+
+  </div>
+
+<footer>
+      <div class="foot-panel1">
+        <div class="column1">
+          <h2>Fresh Veg's</h2>
+          <ul>
+            <p>Fresh vegetables are packed with essential nutrients,</p> 
+            <p> vibrant flavors, and numerous health benefits.</p>
+            <br>
+            <li><a href=""><i class="ri-home-4-fill"></i></a> North Beach , San Francisco , CA USA</li>
+            <li><a href="#"><i class="ri-phone-fill"></i></a> +1 613 123 0258</li>
+            <li><a href="#"><i class="ri-mail-fill"></i></a> info@example.com</li>
+          </ul>
+        </div>
+
+        <div class="column2">
+          <h2>Customer Support</h2>
+          <ul>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms & Conditions</a></li>
+            <li><a href="./return.html">Product Return</a></li>
+            <li><a href="./wholesale.html">Wholesale Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="column3">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="./product.html">Products</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./accessories.html">Accessories</a></li>
+            <li><a href="./terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+
+        <div class="column4">
+          <h2>News Letter</h2>
+          <input type="text" class="input" placeholder=" Enter your email here" id="fname" name="fname" /><br />
+          <button class="button2">SUBSCRIBE</button><br />
+          <h4>Stay Connected</h4>
+          <div class="social">
+            <a href="https://github.com/login"
+              ><img class="footer-top" src="./assets/social/GIT.png" alt=""
+            /></a>
+    
+            <a href="https://indeed.com/login"
+              ><img class="footer-top" src="./assets/social/indeed.png" alt=""
+            /></a>
+    
+            <a href="https://x.com/i/flow/login"
+              ><img class="footer-top" src="./assets/social/twit.png" alt=""
+            /></a>
+    
+            <a href="https://facebook.com/login">
+              <img class="footer-top" src="./assets/social/fb.png" alt=""
+            /></a>
+    
+            <a href="https://instagram.com/login"
+              ><img class="footer-top" src="./assets/social/insta.png" alt=""
+            /></a>
+          </div>
+      </div>
+    </footer>
+
+</body>
+</html>

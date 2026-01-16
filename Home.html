@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fresh Organic Farm</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f8f8f8;
+      color: #333;
+    }
+
+    /* HERO */
+    .page1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem;
+      min-height: 100vh;
+      background: url("./assets/banner-slide/Banner-1.jpg") center/cover no-repeat;
+      color: white;
+    }
+
+    .page1 h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .page1 p { font-size: 1.3rem; margin: 0.5rem 0; }
+    .page1 button {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 25px;
+      background: #65c92c;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .page1 button a { text-decoration: none; color: white; font-weight: bold; }
+    .page1 button:hover { background: #4aa020; transform: scale(1.05); }
+
+
+
+    /* NEWSLETTER */
+    .newsletter {
+      padding: 3rem 2rem;
+      background: #03262c;
+      color: white;
+      text-align: center;
+    }
+    .newsletter input {
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+      margin-right: 10px;
+      width: 250px;
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background: #65c92c;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #021b1f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="page1">
+    <h1>100% Organic</h1>
+    <p>Fresh & Natural Farm Food</p>
+    <p2>Bringing you the purest organic produce straight from our farms.</p2>
+    <button><a href="./product.html">ALL PRODUCTS</a></button>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <h2>Subscribe for Fresh Updates</h2>
+    <input type="email" placeholder="Enter your email"/>
+    <button>Subscribe</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Fresh Organic Farm. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

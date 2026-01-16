@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Fresh Vegetables & Fruits</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    /* background: #E8E8E8; */
+     background-image: url(./assets/banner-slide/Banner-1.jpg);
+    font-family: "Montserrat", sans-serif;
+
+  }
+
+.header {
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.header-img {
+  background-image: url(./assets/images/header-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 14rem;
+}
+
+.lhs .Logo {
+  height: 50px;
+  width: 70px;
+  margin-left: 8rem;
+  object-fit: cover; /* Ensures proper scaling of the logo */
+}
+
+.middle {
+  display: flex; /* Ensure the links are laid out horizontally */
+  gap: 50px; /* Spacing between links */
+}
+
+.middle a {
+  text-decoration: none; /* Removes default link underline */
+  color: white; /* Default text color */
+  font-size: 15px; /* Adjust font size */
+  font-weight: bold; /* Makes links stand out */
+}
+
+.middle a:hover {
+  color: #65c92c;
+  font-size: 17px;
+}
+
+.rhs a {
+  margin-right: 8rem;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligns text to the right */
+}
+
+.rhs a span {
+  font-size: 14px; /* Smaller font size for the phone number */
+  color: darkgreen; /* Slightly different color for emphasis */
+}
+
+.rhs a:hover {
+  color: #65c92c;
+  font-size: 17px;
+}
+
+  /* General Styles */
+  .contact-section {
+    padding: 60px 0;
+    /* background-color: #03262c; */
+    color: #000000;
+    /* height: 100vh; */
+  }
+
+  .contact-section .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* Left Image Section */
+  .image-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 100px 0 100px 100px;
+  }
+
+  /* Right Form Section */
+  .form-section {
+    position: relative;
+  }
+
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #03262C;
+    border-radius: 0 30px 150px 50px;
+    z-index: 0;
+  }
+
+  .form-content {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+  }
+
+  .header h2 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+
+  .header p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #ffffff;
+
+  }
+
+  /* Form Styling */
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    color: #967e7e;
+    outline: none;
+    font-size: 16px;
+  }
+
+  .form-input:focus,
+  .form-textarea:focus {
+    border-color: #86b7fe;
+  }
+
+  .submit-button {
+    background-color: #137906;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .submit-button:hover {
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.74);
+  }
+
+  
+footer {
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-evenly;
+  /* flex-wrap: wrap; */
+  /* position: relative; */
+  padding-top: 14rem;
+}
+
+.foot-panel1 {
+  background-image: url(./assets/footer-bg/footer_bg.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+  padding: 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  margin: 5px 0;
+}
+
+footer li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+footer li a:hover {
+  color: #65c92c; /* A vibrant green for hover effect */
+}
+
+footer .button2 {
+  background-color: #137906;
+  border: 1px solid white;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 12px;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+footer .button2:hover {
+  box-shadow: 0px 0px 12px 4px rgba(133, 171, 123, 0.74);
+}
+
+footer .column4 .input {
+  background-color: #03262c41;
+  color: aliceblue;
+  border: 1px solid #ffffff4f;
+  border-radius: 3px;
+  width: 250px;
+  height: 25px;
+}
+
+footer .social {
+  height: 0px;
+  width: 150px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-top {
+  width: 27px;
+  position: relative;
+  top: 50px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column1,
+  .column2,
+  .column3,
+  .column4 {
+    margin-bottom: 20px;
+  }
+}
+
+</style>
+
+<body>
+   <div class="header">
+      <div class="header-img">
+        <div class="lhs">
+          <img
+            class="Logo"
+            src="./assets/images/logo.png"
+            alt="Fresh Veg's Logo"
+          />
+        </div>
+        <nav class="middle">
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./product.html">Product</a>
+          <a href="./gallery.html">Gallery</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+        <div class="rhs">
+          <a href="#">
+            Call Us!
+            <p1>+1 613 123 0258</p1>
+          </a>
+        </div>
+      </div>
+    </div>
+  <section class="contact-section">
+  <div class="container">
+    <div class="grid">
+      <!-- Left Image Section -->
+      <div class="image-section">
+        <img
+          src="https://cdn.easyfrontend.com/pictures/contact/contact_1.png"
+          alt="Contact Us"
+          class="contact-image"
+        />
+      </div>
+
+      <!-- Right Form Section -->
+      <div class="form-section">
+        <div class="background-overlay"></div>
+        <div class="form-content">
+          <div class="header">
+            <h2>Contact Us</h2>
+            <p>We list your menu online, help you process orders.</p>
+          </div>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-input" placeholder="Enter Name" />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-input"
+                placeholder="Enter Email"
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                name="message"
+                class="form-textarea"
+                placeholder="Enter Message"
+                rows="4"
+              ></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="submit-button">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+    <footer>
+      <div class="foot-panel1">
+        <div class="column1">
+          <h2>Fresh Veg's</h2>
+          <ul>
+            <p>Fresh vegetables are packed with essential nutrients,</p> 
+            <p> vibrant flavors, and numerous health benefits.</p>
+            <br>
+            <li><a href=""><i class="ri-home-4-fill"></i></a> North Beach , San Francisco , CA USA</li>
+            <li><a href="#"><i class="ri-phone-fill"></i></a> +1 613 123 0258</li>
+            <li><a href="#"><i class="ri-mail-fill"></i></a> info@example.com</li>
+          </ul>
+        </div>
+
+        <div class="column2">
+          <h2>Customer Support</h2>
+          <ul>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms & Conditions</a></li>
+            <li><a href="./return.html">Product Return</a></li>
+            <li><a href="./wholesale.html">Wholesale Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="column3">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="./product.html">Products</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./accessories.html">Accessories</a></li>
+            <li><a href="./terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+
+        <div class="column4">
+          <h2>News Letter</h2>
+          <input type="text" class="input" placeholder=" Enter your email here" id="fname" name="fname" /><br />
+          <button class="button2">SUBSCRIBE</button><br />
+          <h4>Stay Connected</h4>
+          <div class="social">
+            <a href="https://github.com/login"
+              ><img class="footer-top" src="./assets/social/GIT.png" alt=""
+            /></a>
+    
+            <a href="https://indeed.com/login"
+              ><img class="footer-top" src="./assets/social/indeed.png" alt=""
+            /></a>
+    
+            <a href="https://x.com/i/flow/login"
+              ><img class="footer-top" src="./assets/social/twit.png" alt=""
+            /></a>
+    
+            <a href="https://facebook.com/login">
+              <img class="footer-top" src="./assets/social/fb.png" alt=""
+            /></a>
+    
+            <a href="https://instagram.com/login"
+              ><img class="footer-top" src="./assets/social/insta.png" alt=""
+            /></a>
+          </div>
+      </div>
+    </footer>
+
+
+</body>
+</html>
